@@ -35,7 +35,8 @@ stages:
        inputs:
         command: 'publish'
         publishWebProjects: true
-        arguments: '--configuration = $(buildconfiguration) --output $(build.artifactsstagingdirectory)/$'
+        arguments: '--configuration  $(buildConfiguration) --output $(build.ArtifactsStagingDirectory)/$(buildConfiguration)'
+        
         zipAfterPublish: true
      - task: PublishBuildArtifacts@1
        inputs:
