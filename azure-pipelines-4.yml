@@ -21,12 +21,12 @@ stages:
      - task: Npm@1
        inputs:
         command: 'install'
-        workingDir: 'clientApp'
+        workingDir: 'ClientApp'
       
      - task: Npm@1
        inputs:
         command: 'ci'
-        workingDir: 'clientApp'
+        workingDir: 'ClientApp'
      
      - script: dotnet build --configuration $(buildConfiguration)
         displayName:'dotnet build $(buildConfiguration)'
